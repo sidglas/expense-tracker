@@ -9,16 +9,19 @@ const { addTransaction } = useContext(GlobalContext)
 
 const onSubmit = e => {
    e.preventDefault()
-   console.log('Numero ?????' , amount)
-   const newTransaction = {
-      id: Math.floor(Math.random() * 100000000),
-      text,
-      amount: +amount
+
+   if (amount ) {
+      const newTransaction = {
+         id: Math.floor(Math.random() * 100000000),
+         text,
+         amount: +amount
+      }
+      addTransaction(newTransaction)      
    }
 
-   addTransaction(newTransaction)
    setText('')
    setAmount('')
+
 }
 
   return (
