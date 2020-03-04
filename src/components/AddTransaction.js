@@ -17,6 +17,7 @@ const onSubmit = e => {
    }
 
    addTransaction(newTransaction)
+   setText('')
 }
 
   return (
